@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital Sign Up Form</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand1" style="font-size: 20px" href="/hospital/regi/" title="HOME"><i-->
+                <!--                        class="ion-paper-airplane"></i>-->
+                <span>Signup</span></a>
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/hospital/regi/">Register</a></li>
+                    <li><a href="/hospital/login/">Login</a></li>
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+
+
+<div class="main">
+
+    <!-- Sign up form -->
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Hospital Sign up</h2>
+                    <form action="/hospital/regi/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div style="height:40px"></div>
+                        <!--                        <div class="form-group">-->
+                        <!--                            <label for="regno">Register Number</label>-->
+                        <!--                            <input style="width:300px;height:40px" type="text" name="regno" id="regno"-->
+                        <!--                                   placeholder="Enter Register Number"/>-->
+                        <!--                        </div>-->
+                        <div class="form-group">
+                            <label for="nam">Name</label>
+                            <input type="text" name="nam" id="nam" placeholder="Enter Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Enter Email"/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input style="width:300px;height:40px" type="password" name="pass" id="pass"
+                                   placeholder="Enter Password"/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="add">Address</label>
+                            <textarea type="text" name="add" id="add" placeholder="Enter Address"></textarea>
+                        </div>
+
+
+                        <div class="button">
+                            <button style="background-color:powderblue;width:80px;height:30px;border-radius:5px;color
+
+:black"
+                                    type="submit" name="signup" id="signup" class="form-submit">Register
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <div style="height:30px"></div>
+                <div class="signup-image">
+                    <figure><img src="/static/Images/registration.jpg" alt="sing up image"
+                                 style="width:300px;height:300px;"></figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/JS/main.js"></script>
+</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

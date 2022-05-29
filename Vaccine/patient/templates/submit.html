@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vaccinated</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="/" title="HOME"><i class="ion-paper-airplane"></i> User-->
+                <!--                    <span>Vaccinated</span></a>-->
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/home/">Home</a></li>
+
+                    <li><a href="/base/">Base</a></li>
+                    <li class="active"><a href="/request/">Submit</a></li>
+                    <li><a href="/book/">Schedule</a></li>
+                    <li><a href="/patcertificate/">Certificate</a></li>
+
+                    <!--                    <li><a href="/logs/">Logs</a></li>-->
+
+
+                    <li><a href="/">Logout</a></li>
+
+
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+<div style="height:100px"></div>
+<div style="height:50px" align="center"><h4 style="color:white">Submit Request</h4></div>
+
+<div style="height:20px" class="ff" align="center"><h4></h4>
+    <form action="/request/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table class="tb">
+            <tr>
+                <td><label>File:</label></td>
+                <td><input type="file" name="image"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="height:50px"></div>
+
+                    <div>
+
+                        <label for="sub"> Vaccinated <input type="checkbox" id="sub" name="sub" value="Vaccinated">
+                        </label><br>
+                        <!--                        <input type="checkbox" id="bloodg" name="blood1" value="blood1">-->
+                        <!--                        <label> Blood Group</label><br>-->
+                        <!--                        <input type="checkbox" id="age" name="age1" value="age1">-->
+                        <!--                        <label> Age</label><br>-->
+                        <!--                        <input type="checkbox" id="age" name="age1" value="age1">-->
+                        <!--                        <label> Age</label><br>-->
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;" type="submit" class="bbn">Submit
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+
+</body>
+</html>

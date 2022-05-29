@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Certificate</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/CSS/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+{% if messages %}
+    {% for message in messages %}
+     {% if message.tags %}<script>alert("{{ message}}")</script>{% endif %}
+    {% endfor %}
+{% endif %}
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="home.html" title="HOME"><i class="ion-paper-airplane"></i> Amigo <span>Travel</span></a>-->
+                <!--            </div> &lt;!&ndash; /.navbar-header &ndash;&gt;-->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">HOME</a></li>
+
+                        <li><a href="/base/">BASE</a></li>
+<!--                        <li><a href="/request/">Submit</a></li>-->
+                        <li><a href="/book/">SCHEDULE</a></li>
+                        <li class="active"><a href="/patcertificate/">CERTIFICATE</a></li>
+
+
+                        <!--                    <li><a href="/logs/">Logs</a></li>-->
+
+
+                        <li><a href="/">LOGOUT</a></li>
+                    </ul> <!-- /.nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </div>
+    </nav>
+</section>
+
+
+<div class="tab1" align="center">
+    <form action="/patcertificate/" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div style="height:100px"></div>
+
+        <td style="color:black"><select name="typs" style="padding:10px 15px; border-radius:8px; margin-right:15px;">
+                    <option style="padding:15px;">General Vaccine</option>
+
+                </select>
+                </td>
+
+        <td align="center" style="color:black">
+            <button  type="submit" formaction="/patcertificate/" formmethod="post" style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  border-radius:8px;
+  display: inline-block;
+  font-size: 16px;"> <i class="fa fa-file"></i>  Generate Certificate
+            </button>
+
+        </td>
+        <td>
+            <button class="btn" type="submit" formaction="/patientdownload/" style="background-color: #11d9cb; /* aqua */
+  border: none;
+  color: white;
+  padding: 10px 45px;
+  margin-left:20px;
+  border-radius:8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;"><i class="fa fa-download"></i> Download
+            </button>
+        </td>
+    </form>
+
+      <div style="margin-top:35px">
+        <figure><img src="/static/Images/vaccinated22.jpg" alt="sing up image" style="height:350px;width:650px"></figure></div>
+</div>
+<script src="/static/vendor/jquery/jquery.min.js/"></script>
+<!--<script src="/static/JS/main.js"></script>-->
+</body>
+</html>

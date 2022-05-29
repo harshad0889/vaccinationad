@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Chicken pox</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/CSS/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="home.html" title="HOME"><i class="ion-paper-airplane"></i> Amigo <span>Travel</span></a>-->
+                <!--            </div> &lt;!&ndash; /.navbar-header &ndash;&gt;-->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="/book/">Q&A</a></li>
+
+                        <li><a href="/book/">Schedule</a></li>
+
+
+                        <!--                    <li><a href="/logs/">Logs</a></li>-->
+
+
+                        <li><a href="/">Logout</a></li>
+                    </ul> <!-- /.nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </div>
+    </nav>
+</section>
+
+
+<div class="tab1" align="center">
+    <form enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div style="height:50px"></div>
+
+        <!--        <div class="form-group">-->
+        <!--            <label>Time of Injury :</label>-->
+        <!--            <td style="color:black"><input type="time" name="tin"></td>-->
+        <!--        </div>-->
+        <div class="form-group" style=" font-size: 16px">
+            <label>Are you allergic to neomycin ?</label>
+            <textarea name="q11" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">
+            <label>Are you allergic to gelatin ?</label>
+            <textarea name="q12" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">
+            <label> Are you receiving high doses of steroids ?</label>
+            <textarea name="q13" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">
+            <label> Have you been treated for cancer with X-rays, drugs, or chemotherapy ? </label>
+            <textarea name="q14" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">
+            <label>Do have any immune system disease ?</label>
+            <textarea name="q15" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">
+            <label>Have you had a transfusion or received blood products within five months prior to the shot ? </label>
+            <textarea name="q16" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">-->
+            <label>Are you pregnant ? </label>
+            <textarea name="q17" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">-->
+            <label> Do you have blood dyscrasias, leukemia or lymphomas ? </label>
+            <textarea name="q18" placeholder="Answer"></textarea>
+        </div>
+        <div class="form-group" style=" font-size: 16px">-->
+            <label> Do you have HIV/AIDS or another disease ? </label>
+            <textarea name="q19" placeholder="Answer"></textarea>
+        </div>
+
+        <td align="center">
+            <button type="submit" formaction="/aquestion/" formmethod="post">Book Now</button>
+
+        </td>
+    </form>
+</div>
+<script src="/static/vendor/jquery/jquery.min.js/"></script>
+<!--<script src="/static/JS/main.js"></script>-->
+</body>
+</html>

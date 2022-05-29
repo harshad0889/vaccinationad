@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="/" title="HOME"><i class="ion-paper-airplane"></i> User-->
+                <!--                    <span>Base</span></a>-->
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/hospital/view/">Add Vaccine</a></li>
+                    <li class="active"><a href="/hospital/vieww/">Edit</a></li>
+                    <li><a href="/hospital/schedule/">Approve</a></li>
+                    <li><a href="/hospital/stockupdate/">Stock update</a></li>
+
+
+                    <!--                    <li><a href="/logs/">Logs</a></li>-->
+
+
+                    <li><a href="/">Logout</a></li>
+
+
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+
+
+<div class="tab" align="center">
+    <form enctype="multipart/form-data">
+        {% csrf_token %}
+        <div style="height:100px"></div>
+        <div style="height:20px"><h5 style="color:white">Approve</h5></div>
+
+        <div style="height:100px">
+
+
+            <div class="signup-image">
+                {% for i in prd%}
+                <figure><img src="/media/{{i.File}}" alt="sing up image"
+                             style="width:200px;height:200px;"></figure>
+                {% endfor %}
+            </div>
+
+            <div class="form-group">
+
+                <label for="dose">Choose Dose:</label>
+
+
+                <select name="dose" id="dose">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+
+                </select>
+
+
+            </div>
+
+            <button style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;" type="submit" formaction="/hospital/vax_hos_approval_btn/" formmethod="post">Approve
+            </button>
+            <!--                </td>-->
+            <!--                <td align="center">-->
+            <button style="background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;margin-top: 25px;" type="submit" formaction="">Cancel
+            </button>
+            <!--                </td>-->
+            <!--            </table>-->
+        </div>
+
+    </form>
+</div>
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<!--<script src="/static/JS/main.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>cartography1 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="http://webthemez.com"/>
+    <!-- css -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/static/css/jcarousel.css" rel="stylesheet"/>
+    <link href="/static/css/flexslider.css" rel="stylesheet"/>
+    <link href="/static/css/style.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--                    <a class="navbar-brand" href="index.html"><img src="/static/img/logo.png" alt="logo"/></a>-->
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="view.html">Add Vaccine</a></li>
+                        <!--						<li><a href="services.html">Services</a></li>-->
+                        <!--                        <li class="active"><a href="portfolio.html">Portfolio</a></li>-->
+                        <!--                        <li><a href="pricing.html">Pricing</a></li>-->
+                        <!--                        <li><a href="contact.html">Contact</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- end header -->
+    <section id="inner-headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="pageTitle">Single Dose</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="content">
+        <!--        <div class="container">-->
+        <!--            <div class="row">-->
+        <!--                <div class="col-md-12">-->
+        <!--                    <div>-->
+        <!--                        <h3>What we do?</h3>-->
+        <!--                        <p>Vaccines save millions of lives each year. The development of safe and effective COVID-19-->
+        <!--                            vaccines is a huge step forward in our global effort to end the pandemic and to get back to-->
+        <!--                            doing more of the things we enjoy with the people we love.</p>-->
+        <!--                        <p>The COVID-19 pandemic has seriously impacted the lives of children and young people, and the-->
+        <!--                            immunization process will be an important step towards recovery. It means getting all-->
+        <!--                            children back to learning in classrooms and ensuring safe and full access to vital-->
+        <!--                            protection and health services, including routine vaccinations.-->
+
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--                    <ul class="portfolio-categ filter">-->
+                    <!--                        <li class="all active"><a href="#">All</a></li>-->
+                    <!--                        <li class="web"><a href="#" title="">category 1</a></li>-->
+                    <!--                        <li class="icon"><a href="#" title="">category 2</a></li>-->
+                    <!--                        <li class="graphic"><a href="#" title="">category 3</a></li>-->
+                    <!--                    </ul>-->
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/hospital/view/">Single Dose</a></li>
+                            <!--                            <li><a href="view.html">Add Vaccine</a></li>-->
+                            <!--						<li><a href="services.html">Services</a></li>-->
+                            <!--                        <li class="active"><a href="portfolio.html">Portfolio</a></li>-->
+                            <!--                        <li><a href="pricing.html">Pricing</a></li>-->
+                            <!--                        <li><a href="contact.html">Contact</a></li>-->
+                        </ul>
+                    </div>
+                    <div class="clearfix">
+
+                    </div>
+                    <style>
+      div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </style>
+                    <form action="/hospital/cat1/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input style="width:300px;height:40px" type="text" name="name" id="name"
+                                   placeholder="Enter Vaccine Name"/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="vno">Vaccine Number</label>
+                            <input style="width:300px;height:40px" type="text" name="vno" id="vno"
+                                   placeholder="Vaccine Id"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Details</label>
+                            <input style="width:300px;height:40px" type="text" name="details" id="details"
+                                   placeholder="Enter the details of vaccine"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <input style="width:300px;height:40px" type="text" name="duration" id="duration"
+                                   placeholder="Enter the duration of vaccine"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="available">Available Vaccine</label>
+                            <input style="width:300px;height:40px" type="text" name="available" id="available"
+                                   placeholder=" Available Number of vaccine"/>
+                        </div>
+
+                        <!--                    <div class="form-group">-->
+                        <!--                        <label for="add">Address</label>-->
+                        <!--                        <textarea name="add" id="add" placeholder="Enter Address"></textarea>-->
+                        <!--                    </div>-->
+
+                        <div class="button">
+
+                            <button style="background-color:powderblue;width:80px;height:30px;border-radius:5px;position: absolute; right: 690px;"
+                                    type="submit" name="signup" id="signup" class="form-submit">ADD
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery.easing.1.3.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.fancybox.pack.js"></script>
+<script src="/static/js/jquery.fancybox-media.js"></script>
+<script src="/static/js/portfolio/jquery.quicksand.js"></script>
+<script src="/static/js/portfolio/setting.js"></script>
+<script src="/static/js/jquery.flexslider.js"></script>
+<script src="/static/js/animate.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+</html>

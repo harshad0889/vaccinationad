@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Edit</title>
+    <link rel="stylesheet" href="/static/CSS/admin.css">
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/CSS/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="/" title="HOME"><i class="ion-paper-airplane"></i>Hospital-->
+                <!--                    <span> Edit</span></a>-->
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/hospital/view/">Add Vaccine</a></li>
+                    <li class="active"><a href="/hospital/vieww/">Edit</a></li>
+                    <!--                    <li><a href="/hospital/schedule/">Schedule</a></li>-->
+                    <li><a href="/hospital/stockupdate/">Stock update</a></li>
+
+
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+
+
+
+
+
+
+
+
+<div>
+    <div class="tab2" align="center"><h1 style="color:black">Hospital Views</h1>
+    <div style="float:right;width:900px">
+
+            <form>
+                {% csrf_token %}
+
+            </form>
+            <form>
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <label style="margin-top:30px">Choose child Role:</label>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label>Register Number</label>
+                    <textarea name="regno" placeholder="Enter Register Number"></textarea>
+                </div>
+                <select name="vax_name" id="vax_name" >
+                    <option value="Hepatitis">Hepatitis</option>
+                    <option value="bcg">bcg</option>
+                    <option value="ipv">ipv</option>
+
+                </select>
+
+                <!--         <td style="color:black"><input type="date" name="dateeee"></td>-->
+                <!--        <td style="color:black"><input type="time" name="timeee"></td>-->
+
+                <div class="form-group">
+
+                    <label >Choose Dose:</label>
+
+
+                    <select name="dosesss" id="dosesss">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+
+                    </select>
+
+
+                </div>
+                <!--        <td style="color:black"><input type="date" name="nxtdat"></td>-->
+                <!--        <td style="color:black"><input type="time" name="nxttim"></td>-->
+
+
+                <div class="form-group form-button">
+                    <button type="submit" formaction="/hospital/edit/" formmethod="post"
+                            formenctype="multipart/form-data"
+                            name="signup" id="signup" class="form-submit">Edit
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <div style="width:900px">
+        <div class="tab2" align="center"><h1 style="color:black"></h1>
+            <form>
+                {% csrf_token %}
+
+            </form>
+            <form>
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <label  style="margin-top:20px">Choose Adult Role:</label>
+
+
+
+                </div>
+
+                <div class="form-group">
+                    <label>Register Number</label>
+                    <textarea name="regno" placeholder="Enter Register Number"></textarea>
+                </div>
+
+
+                <!--         <td style="color:black"><input type="date" name="dateeee"></td>-->
+                <!--        <td style="color:black"><input type="time" name="timeee"></td>-->
+
+                <div class="form-group">
+
+                    <label >Choose Dose:</label>
+
+
+                    <select name="dosesss" id="Adult_dosesss">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+
+                    </select>
+
+
+                </div>
+                <!--        <td style="color:black"><input type="date" name="nxtdat"></td>-->
+                <!--        <td style="color:black"><input type="time" name="nxttim"></td>-->
+
+
+                <div class="form-group form-button">
+                    <button type="submit" formaction="/hospital/adult_edi/" formmethod="post"
+                            formenctype="multipart/form-data"
+                            name="signup"  class="form-submit">Edit
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/JS/main.js"></script>
+
+
+</body>
+</html>

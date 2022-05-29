@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Sign Up Form</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/CSS/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+</head>
+<body>
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="/" title="HOME"><i class="ion-paper-airplane"></i> User-->
+                <!--                    <span>Signup</span></a>-->
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/reg/">Register</a></li>
+                    <li><a href="/login/">Login</a></li>
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+
+
+<div class="main">
+
+    <!-- Sign up form -->
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <div class="row">
+                <div class="col-md-6">
+                    <h2 class="form-title">Sign up</h2>
+                    <br>
+                    <form action="/reg/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <!--                        <div class="form-group">-->
+                        <!--                            <label for="user"><i class="zmdi zmdi-account material-icons-user"></i></label>-->
+                        <!--                            <input type="text" name="user" id="user" placeholder="Your Username"/>-->
+                        <!--                        </div>-->
+
+
+                        <div class="form-group">
+<!--                            <label for="nam"><i class="zmdi zmdi-account material-icons-name"></i></label>-->
+                            <input   class="form-control"type="text" name="nam" id="nam" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="aad"></i></label>
+                            <input  class="form-control" type="text" name="addh" id="aad" placeholder="Your Aadhar"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="mail"></label>
+                            <input  class="form-control" type="text" name="email" id="mail" placeholder="  Email"/>
+
+                        </div>
+                        <div class="form-group">
+<!--                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>-->
+                            <input  class="form-control" type="password" name="pass" id="pass" placeholder="Password"/>
+                        </div>
+                        <div class="form-group">
+<!--                            <label for="user"></i></label>-->
+                            <input   class="form-control"type="text" name="phone" id="user" placeholder="Your Phone No"/>
+                        </div>
+
+                        <!--                        <div class="form-group">-->
+                        <!--                            <label for="role">Choose Role:</label>-->
+                        <!--                            <select name="Role" id="Role">-->
+                        <!--                                <option value="default">Choose Role</option>-->
+                        <!--                                <option value="lab">Lab</option>-->
+                        <!--                                <option value="doctor">Doctor</option>-->
+                        <!--                                <option value="researcher">Researcher</option>-->
+                        <!--                                <option value="user">User</option>-->
+                        <!--                            </select>-->
+                        <!--                        </div>-->
+                        <div class="form-group">
+                            <!--                            <label for="nam"><i class="zmdi zmdi-account material-icons-name"></i></label>-->
+                            <input  class="form-control" type="text" name="dob" id="blood" placeholder="DD/MM/YYYY"/>
+                        </div>
+                        <div class="form-group">
+                            <!--                            <label for="nam"><i class="zmdi zmdi-account material-icons-name"></i></label>-->
+                            <input  class="form-control" type="text" name="age" id="disease" placeholder="Your Age"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user"></i></label>
+                            <input  class="form-control" type="text" name="add" id="add" placeholder="Your Address"/>
+                        </div>
+                        <!--                        <div>-->
+                        <!--                            <label for="nam">Select The Consent To Allow Access</label>-->
+                        <!--                            <input type="checkbox" id="name1" name="name" value="name">-->
+                        <!--                            <label for="name1"> Name</label><br>-->
+                        <!--                            <input type="checkbox" id="bloodg" name="blood1" value="blood1">-->
+                        <!--                            <label for="blood"> Blood Group</label><br>-->
+                        <!--                            <input type="checkbox" id="diseases" name="disease1" value="disease1">-->
+                        <!--                            <label for="disease"> Age</label><br>-->
+                        <!--                            <input type="checkbox" id="lab" name="lab1" value="lab1">-->
+                        <!--                            <label for="lab"> Lab Access to Test</label><br>-->
+                        <!--                        </div>-->
+
+
+                        <div class="form-group form-button">
+                            <button type="submit" name="signup" id="signup" class="form-submit " style="padding:8px 45px; background:#11d9cb; border-radius:8px; color:white">Register
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+               <div class="col-md-4 d-flex align-items-center">
+
+                    <div class="signup-image">
+                    <figure><img src="/static/Images/signup-image.jpg" alt="sing up image"></figure>
+                </div>
+                </div>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <!--    <script src="/static/JS/main.js"></script>-->
+</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

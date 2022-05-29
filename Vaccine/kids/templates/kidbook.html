@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kids Vaccine Booking</title>
+    <link rel="icon" type="image/png" href="/static/Images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/font-awesome-4.7.0/CSS/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/Fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/CSS/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log_util.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/log.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/CSS/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/all.css">
+
+</head>
+<body>
+{% if messages %}
+{% for message in messages %}
+{% if message.tags %}
+<script>alert("{{ message}}")</script>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<section class="header">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--                <a class="navbar-brand" href="/" title="HOME"><i class="ion-paper-airplane"></i> Amigo-->
+                <!--                    <span>Travel</span></a>-->
+            </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/kids/kidsbase/">Base</a></li>
+                    <li><a href="/kids/request/">Submit</a></li>
+                    <li class="active"><a href="/kids/kidbook/">Schedule</a></li>
+                    <li><a href="/kids/kidcertificate/">Certificates</a></li>
+
+                    <!--                    <li ><a href="/book/">Book</a></li>-->
+                    <li><a href="/">Logout</a></li>
+
+
+                </ul> <!-- /.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</section>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div style="height:50px"></div>
+    <div class="tab" align="center">
+
+
+        <table class="tbl" border="1px" align="center" style="width:40%">
+            <tr align="center">
+                <th style="text-align:center">Name</th>
+                <th style="text-align:center">Dose</th>
+                <th style="text-align:center">Date</th>
+                <th style="text-align:center">Time</th>
+
+                <th style="text-align:center">Type</th>
+
+
+            </tr>
+            <tr align="center">
+
+                <td style="color:black"><select name="nam">
+                    {% for i in prd %}
+
+                    <option>{{i.Name}}</option>
+
+                    {% endfor %}
+
+                </select>
+                </td>
+
+
+                <td style="color:black"><select name="vacc">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+
+                </select>
+                </td>
+
+                <td style="color:black"><input type="date" name="datee"></td>
+                <td style="color:black"><input type="time" name="tim"></td>
+
+
+                <td style="color:black"><select name="type">
+                    <!--                    <option>Single Dose</option>-->
+                    <!--                    <option>Multi Dose</option>-->
+                    <option>Child Vaccine</option>
+
+
+                </select>
+                </td>
+
+                <td align="center">
+                    <button type="submit" formaction="/kids/kidbook/" formmethod="post">Book now</button>
+
+                </td>
+
+            </tr>
+        </table>
+        <!--        <div style="height:100px"></div>-->
+
+        <!--        <td align="center" style="color:black">-->
+        <!--            <button style="background-color: #4CAF50; /* Green */-->
+        <!--  border: none;-->
+        <!--  color: white;-->
+        <!--  padding: 15px 32px;-->
+        <!--  text-align: center;-->
+        <!--  text-decoration: none;-->
+        <!--  display: inline-block;-->
+        <!--  font-size: 16px;" type="submit" formaction="/kids/kidcertificate/" formmethod="post">Generate Certificate-->
+        <!--            </button>-->
+
+        <!--        </td>-->
+        <!--        &lt;!&ndash; Auto width &ndash;&gt;-->
+        <!--        <button class="btn" type="submit" formaction="/kids/download/"><i class="fa fa-download"></i> Download</button>-->
+
+        <!--        <div style="display: flex;margin-top:100px;margin-left:100px;border-style: double;width:500px">-->
+        <!--            {% for i in dose %}-->
+
+        <!--            <div style="height:50px;width:100px;background-color:gray;border-style: double;"></div>-->
+        <!--            {% endfor %}-->
+
+        <!--        </div>-->
+    </div>
+</form>
+
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/JS/main.js"></script>
+</body>
+</html>
